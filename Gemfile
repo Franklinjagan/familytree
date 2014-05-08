@@ -20,7 +20,7 @@ end
 
 gem 'jquery-rails'
 gem 'mysql2'
-
+gem 'sqlite3'
 gem 'rspec-rails'
 
 # To use ActiveModel has_secure_password

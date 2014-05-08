@@ -32,13 +32,20 @@
   <div class='relations'>
     <h2>Relative Information</h2>
     <h3>Parents</h3>
+     <% @person.listParents.each do |parent| %>
+      <p><%= parent.first_name %> <%= parent.middle_name %> <%= parent.last_name %></p>
+    <% end %>
     <h3>Spouse</h3>
     <% @person.listSpouses.each do |spouse| %>
       <p><%= spouse.first_name %> <%= spouse.middle_name %> <%= spouse.last_name %></p>
     <% end %>
     <h3>Siblings</h3>
+    <% @person.listSiblings.each do |sibling| %>
+      <p><%= sibling.first_name %> <%= sibling.middle_name %> <%= sibling.last_name %></p>
+    <% end %>
     <h3>Children</h3>
-    <!-- <%= f.collection_select(:id, Person.all, :id, :fullName)%> -->
+   
+   <%#= f.collection_select(:id, Person.all, :id, :fullName)%>
   </div>
 </div>
 <div class="actions">
